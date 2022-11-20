@@ -19,8 +19,12 @@ export default defineComponent({
 
 <template>
   <section>
-    <strong>{{ timer }}</strong>
+    <strong class="display">{{ timer }}</strong>
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.display {
+  color: var(--text-primary);
+}
+</style>

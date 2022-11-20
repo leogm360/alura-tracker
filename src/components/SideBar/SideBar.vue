@@ -3,6 +3,28 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "SideBar",
+  emits: ["switch-theme"],
+  data() {
+    return {
+      isDarkThemeActive: false,
+    };
+  },
+  computed: {
+    themeText(): string {
+      if (this.isDarkThemeActive) {
+        return "Desativar modo escuro";
+      }
+
+      return "Ativar modo escuro";
+    },
+  },
+  methods: {
+    theme() {
+      this.isDarkThemeActive = !this.isDarkThemeActive;
+
+      this.$emit("switch-theme", this.isDarkThemeActive);
+    },
+  },
 });
 </script>
 
@@ -14,6 +36,7 @@ export default defineComponent({
         alt="Alura Tracker - Rastreie seu tempo de forma inteligente"
       />
     </h1>
+    <button class="button" @click="theme">{{ themeText }}</button>
   </header>
 </template>
 
@@ -23,6 +46,7 @@ header {
   width: 100%;
   height: 100vh;
   padding: 1rem;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {

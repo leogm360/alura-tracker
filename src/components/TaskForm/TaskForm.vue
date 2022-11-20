@@ -31,7 +31,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="box">
+  <div class="box form">
     <div class="columns">
       <div
         class="column is-8"
@@ -51,4 +51,9 @@ export default defineComponent({
   </div>
 </template>
 
-<style scoped></style>
+<style>
+.form {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+</style>

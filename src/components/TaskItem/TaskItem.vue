@@ -1,12 +1,14 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import TimerMarker from "../TimerMarker/TimerMarker.vue";
+import BoxContainer from "../BoxContainer/BoxContainer.vue";
 import { TTask } from "../../types/task";
 
 export default defineComponent({
   name: "TaskItem",
   components: {
     TimerMarker,
+    BoxContainer,
   },
   props: {
     task: {
@@ -18,20 +20,18 @@ export default defineComponent({
 </script>
 
 <template>
-  <li class="box has text-weight-bold">
-    <div class="columns">
-      <div class="column is-7">
-        <p>{{ task.description }}</p>
+  <li>
+    <BoxContainer>
+      <div class="columns">
+        <div class="column is-7">
+          <p>{{ task.description || "Tarefa sem descrição" }}</p>
+        </div>
+        <div class="column">
+          <TimerMarker :elapsed-time="task.time" />
+        </div>
       </div>
-      <div class="column">
-        <TimerMarker :elapsed-time="task.time" />
-      </div>
-    </div>
+    </BoxContainer>
   </li>
 </template>
 
-<style scoped>
-.box {
-  background: #faf0ca;
-}
-</style>
+<style scoped></style>
