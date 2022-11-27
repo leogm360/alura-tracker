@@ -74,4 +74,10 @@ main.dark {
 .content {
   background-color: var(--bg-primary);
 }
+
+ul,
+ol,
+li {
+  list-style: none;
+}
 </style>
