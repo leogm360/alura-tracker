@@ -32,7 +32,7 @@ export default defineComponent({
   <header>
     <h1>
       <img
-        src="../../assets/images/alura-tracker-logo.webp"
+        src="@images/alura-tracker-logo.webp"
         alt="Alura Tracker - Rastreie seu tempo de forma inteligente"
       />
     </h1>

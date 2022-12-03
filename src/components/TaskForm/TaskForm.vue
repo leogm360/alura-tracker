@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import TimerControls from "../TimerControls/TimerControls.vue";
-import { TTask } from "../../types/task";
+import { TimerControls } from "@components";
 
 export default defineComponent({
   name: "TaskForm",

@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@components": ["src/components"],
+      "@images": ["src/assets/images"]
+    },
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -11,15 +16,7 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
-    "baseUrl": ".",
-    "types": [
-      "webpack-env"
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
+   "typeRoots": ["./node_modules/@types", "./src/@types"], 
     "lib": [
       "esnext",
       "dom",

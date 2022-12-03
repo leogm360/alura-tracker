@@ -1,8 +1,6 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import TimerMarker from "../TimerMarker/TimerMarker.vue";
-import BoxContainer from "../BoxContainer/BoxContainer.vue";
-import { TTask } from "../../types/task";
+import { TimerMarker, BoxContainer } from "@components";
 
 export default defineComponent({
   name: "TaskItem",

@@ -1,10 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import SideBar from "./components/SideBar/SideBar.vue";
-import TaskForm from "./components/TaskForm/TaskForm.vue";
-import TaskItem from "./components/TaskItem/TaskItem.vue";
-import BoxContainer from "./components/BoxContainer/BoxContainer.vue";
-import { TTask } from "./types/task";
+import { SideBar, TaskForm, TaskItem, BoxContainer } from "@components";
 
 export default defineComponent({
   name: "App",

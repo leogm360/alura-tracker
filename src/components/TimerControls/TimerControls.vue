@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import TimerMarker from "../TimerMarker/TimerMarker.vue";
-import ControlButton from "../ControlButton/ControlButton.vue";
+import { TimerMarker, ControlButton } from "@components";
 
 const ONE_SECOND = 1000;
 
@@ -11,7 +10,11 @@ export default defineComponent({
     TimerMarker,
     ControlButton,
   },
-  data() {
+  data(): {
+    elapsedTime: number;
+    timeInterval: NodeJS.Timer | number;
+    isActive: boolean;
+  } {
     return { elapsedTime: 0, timeInterval: 0, isActive: false };
   },
   emits: ["timer-start", "timer-stop"],
